@@ -1,0 +1,15 @@
+/** Steps to follow to execute testng xml files **/
+
+As there are multiple testng.xml files categorized with different set of test cases/suites.
+Hence utilize terminal command line to provide selective parameter to execute those testng.xml only.
+
+For this, add variable to pom.xml inside maven-surefire (to generate testng execution result xml files) <build> section.
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>${suiteFile}</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+
+Eclipse -> go to Window -> Terminal -> go to project folder and type below command line.
+=========command==========
+mvn clean test -DsuiteFile=Test01LoginMercuryTours
