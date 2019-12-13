@@ -10,7 +10,7 @@ public class DriverFactory {
 	public static WebDriver getInstance(String browserName) {
 		if (browserName.toUpperCase() == "CHROME") {
 			System.setProperty("webdriver.chrome.driver",
-					"C:\\Projects\\webFramework\\src\\main\\java\\resources\\browsers\\chromedriver.exe");
+					"C:\\Projects\\webFramework\\src\\main\\java\\resources\\browsers\\chromedriver2.exe");
 			driver = new ChromeDriver();
 		} else if (browserName.toUpperCase() == "IE") {
 			System.setProperty("webdriver.ie.driver", "C:\\Projects\\webFramework\\src\\main\\java\\resources\\browsers\\iexplore.exe");
