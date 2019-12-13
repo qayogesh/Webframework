@@ -8,7 +8,6 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<aspectj.version>1.8.10</aspectj.version>
 	</properties>
 
 	<dependencies>
