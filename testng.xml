@@ -3,7 +3,7 @@
 <suite name="Suite- Login Test">
   <test name="Login Test">
     <classes>
-      <class name="main.com.automation.testSuites.01TestsLoginMercuryTours"/>
+      <class name="com.automation.mercuryTours.testSuites.Test01LoginMercuryTours"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
