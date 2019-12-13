@@ -15,11 +15,10 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ReadExcel {
 
-	public String[][] getData() throws IOException {
-		FileInputStream fis = new FileInputStream(
-				new File("C:\\Projects\\webFramework\\src\\main\\java\\resources\\dataSheets\\testData_Login.xlsx"));
+	public String[][] getData(String filePath, String sheetName) throws IOException {
+		FileInputStream fis = new FileInputStream(new File(filePath));
 		XSSFWorkbook wb = new XSSFWorkbook(fis);
-		XSSFSheet sheet = wb.getSheet("Sheet1");
+		XSSFSheet sheet = wb.getSheet(sheetName);
 		int rowCount = sheet.getLastRowNum() + 1;
 		int colCount = sheet.getRow(0).getLastCellNum();
 		String[][] data = new String[rowCount][colCount];

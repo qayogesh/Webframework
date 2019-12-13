@@ -35,8 +35,7 @@ public class Test01LoginMercuryTours extends DriverFactory {
 	@DataProvider
 	public String[][] getTestData() throws IOException {
 		ReadExcel read = new ReadExcel();
-		System.out.println(read.getData());
-		return read.getData();
+		return read.getData("C:\\Projects\\webFramework\\src\\main\\java\\resources\\dataSheets\\testData_Login.xlsx", "Sheet1");
 	}
 	
 	@BeforeMethod
@@ -45,7 +44,7 @@ public class Test01LoginMercuryTours extends DriverFactory {
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 	}
 
-	@Test(dataProvider = "getTestData", dataProviderClass = Test01LoginMercuryTours.class)
+	@Test(dataProvider = "getTestData")
 	public void loginTest(String usernameData, String passwordData) throws InterruptedException, FileNotFoundException, IOException, ParseException {
 		loginPage = new LoginPage(driver);
 		driver.get(ReadConfig.getConfig("url"));
